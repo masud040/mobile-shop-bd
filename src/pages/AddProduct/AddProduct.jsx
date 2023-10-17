@@ -32,6 +32,7 @@ const AddProduct = () => {
       .then((res) => res.json())
       .then((data) => {
         if (data.insertedId) {
+          form.reset();
           Swal.fire({
             title: "Great!",
             text: "Product Added Successfully",
