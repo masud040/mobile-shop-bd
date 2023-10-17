@@ -54,7 +54,10 @@ const ProductCard = ({ product }) => {
             </p>
           </div>
           <div className="flex flex-col gap-3 ">
-            <Link className="p-2 flex items-center justify-between px-4 bg-green-500 rounded-lg">
+            <Link
+              to={`/productDetails/${_id}`}
+              className="p-2 flex items-center justify-between px-4 bg-green-500 rounded-lg"
+            >
               <span>Details</span>
               <AiFillEye className="text-2xl" />
             </Link>
