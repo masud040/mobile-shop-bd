@@ -18,7 +18,7 @@ const Brand = () => {
         {brands?.map((brand) => (
           <Link to={`/brands/${brand.brandName}`} key={brand._id}>
             <div className="text-center border rounded-lg p-1 bg-gradient-to-r from-green-400 to-blue-500  ">
-              <div className="bg-white rounded-md">
+              <div className="bg-white p-2 rounded-md">
                 <img
                   className="w-32 mx-auto  md:w-60 h-32 md:h-44"
                   src={brand.logo}
