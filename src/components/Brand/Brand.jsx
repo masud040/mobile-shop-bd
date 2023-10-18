@@ -10,9 +10,9 @@ const Brand = () => {
   }, []);
 
   return (
-    <div className="my-8 text-center w-[90%] md:w-[80%] mx-auto">
+    <div className="my-8 text-center w-[90%]  mx-auto">
       <h1 className="  bg-gradient-to-r from-blue-600 via-green-500 to-indigo-400 inline-block text-transparent text-2xl font-bold bg-clip-text ">
-        Our Products
+        Brand Category
       </h1>
       <div className="grid mt-6 grid-cols-2 md:grid-cols-3 gap-5">
         {brands?.map((brand) => (
