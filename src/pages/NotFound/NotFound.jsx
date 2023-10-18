@@ -1,10 +1,19 @@
-import { useRouteError } from "react-router-dom";
-
+import { Link, useRouteError } from "react-router-dom";
+import { BsArrowLeft } from "react-icons/bs";
 const NotFound = () => {
   const error = useRouteError();
   console.error(error);
   return (
-    <div className="bg-[url('https://i.ibb.co/0DsbGfR/404.gif')] bg-center bg-cover bg-no-repeat"></div>
+    <div className="w-[90%]  mt-5 mx-auto">
+      <Link
+        to={"/"}
+        className="flex bg-gray-300 w-max px-4 py-2 rounded-md hover:bg-gray-400 items-center"
+      >
+        <BsArrowLeft />
+        Back To Home
+      </Link>
+      <img src="https://i.ibb.co/0DsbGfR/404.gif" alt="" />
+    </div>
   );
 };
 

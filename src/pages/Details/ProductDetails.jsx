@@ -31,8 +31,8 @@ const ProductDetails = () => {
       });
   };
   return (
-    <div className="w-[90%] md:w-[80%] flex justify-center gap-8 items-center mx-auto my-8">
-      <img src={image} alt="" />
+    <div className="w-[90%]  flex justify-center gap-8 items-center mx-auto my-8">
+      <img className="w-36 rounded-md md:w-52 h-full" src={image} alt="" />
       <div>
         <p>
           <span className="font-semibold">Name: </span>

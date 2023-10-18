@@ -43,7 +43,7 @@ const AddProduct = () => {
       });
   };
   return (
-    <div className="w-[90%] md:w-[80%] mx-auto">
+    <div className="w-[90%] md:w-[60%] my-8 mx-auto">
       <div className="bg-fuchsia-100 rounded-md py-6 text-[#1b1a1ab3] px-8 md:px-16">
         <div className="text-center w-[80%] mb-5 mx-auto">
           <h3 className="text-2xl font-semibold text-[#374151]">
@@ -129,6 +129,7 @@ const AddProduct = () => {
               id=""
               cols="30"
               rows="3"
+              placeholder="Short descriptions"
             ></textarea>
           </div>
           <input
