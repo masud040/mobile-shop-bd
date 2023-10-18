@@ -23,13 +23,16 @@ const UpdateProduct = () => {
       rating,
       descriptions,
     };
-    fetch(`http://localhost:5000/products/${product._id}`, {
-      method: "PUT",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(newProduct),
-    })
+    fetch(
+      `https://technology-and-electronics-server-rlmxwnicm.vercel.app/products/${product._id}`,
+      {
+        method: "PUT",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(newProduct),
+      }
+    )
       .then((res) => res.json())
       .then((data) => {
         if (data.modifiedCount > 0) {

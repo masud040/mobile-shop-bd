@@ -36,7 +36,10 @@ const Router = createBrowserRouter([
             <Cart />
           </PrivateRoute>
         ),
-        loader: () => fetch("http://localhost:5000/cartProducts"),
+        loader: () =>
+          fetch(
+            "https://technology-and-electronics-server-rlmxwnicm.vercel.app/cartProducts"
+          ),
       },
       {
         path: "/login",
@@ -54,7 +57,9 @@ const Router = createBrowserRouter([
           </PrivateRoute>
         ),
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/detailsProducts/${params.id}`),
+          fetch(
+            `https://technology-and-electronics-server-rlmxwnicm.vercel.app/detailsProducts/${params.id}`
+          ),
       },
       {
         path: "/productDetails/:id",
@@ -64,13 +69,17 @@ const Router = createBrowserRouter([
           </PrivateRoute>
         ),
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/detailsProducts/${params.id}`),
+          fetch(
+            `https://technology-and-electronics-server-rlmxwnicm.vercel.app/detailsProducts/${params.id}`
+          ),
       },
       {
         path: "/brands/:brandName",
         element: <BrandDetails />,
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/products/${params.brandName}`),
+          fetch(
+            `https://technology-and-electronics-server-rlmxwnicm.vercel.app/products/${params.brandName}`
+          ),
       },
     ],
   },

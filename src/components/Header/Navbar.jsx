@@ -1,10 +1,21 @@
-import { useContext } from "react";
+import { useContext, useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 import { AuthContext } from "../../Provider/AuthProvider";
 import toast, { Toaster } from "react-hot-toast";
+import { MdDarkMode, MdOutlineDarkMode } from "react-icons/md";
 
 const Navbar = () => {
   const { user, logout } = useContext(AuthContext);
+  const [theme, setTheme] = useState("light");
+  const [dark, setDark] = useState(false);
+
+  useEffect(() => {
+    document.querySelector("html").setAttribute("data-theme", theme);
+  }, [theme]);
+  const handleTheme = () => {
+    setDark(!dark);
+    setTheme(theme === "light" ? "dark" : "light");
+  };
   const handleLogout = () => {
     logout()
       .then(() => {
@@ -101,6 +112,9 @@ const Navbar = () => {
             Login
           </NavLink>
         )}
+        <p onClick={handleTheme} className="text-2xl">
+          {dark ? <MdDarkMode /> : <MdOutlineDarkMode />}
+        </p>
       </div>
     </div>
   );

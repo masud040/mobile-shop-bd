@@ -9,7 +9,9 @@ import "swiper/css/autoplay";
 const FlashSale = () => {
   const [products, setProducts] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:5000/products/apple")
+    fetch(
+      "https://technology-and-electronics-server-rlmxwnicm.vercel.app/products/apple"
+    )
       .then((res) => res.json())
       .then((data) => setProducts(data));
   }, []);

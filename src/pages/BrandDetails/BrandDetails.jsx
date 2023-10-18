@@ -14,7 +14,9 @@ const BrandDetails = () => {
 
   const [banners, setBanners] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:5000/banners")
+    fetch(
+      "https://technology-and-electronics-server-rlmxwnicm.vercel.app/banners"
+    )
       .then((res) => res.json())
       .then((data) => setBanners(data));
   }, []);

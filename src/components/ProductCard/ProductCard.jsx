@@ -58,14 +58,14 @@ const ProductCard = ({ product }) => {
               to={`/productDetails/${_id}`}
               className="p-2 flex items-center justify-between px-4 bg-green-500 rounded-lg"
             >
-              <span>Details</span>
+              <span className="dark:text-white">Details</span>
               <AiFillEye className="text-2xl" />
             </Link>
             <Link
               to={`/updateProduct/${_id}`}
               className="p-2 flex items-center justify-between px-4 bg-pink-600 rounded-lg"
             >
-              <span>Edit</span>
+              <span className="dark:text-white">Edit</span>
               <AiFillEdit className="text-2xl" />{" "}
             </Link>
           </div>

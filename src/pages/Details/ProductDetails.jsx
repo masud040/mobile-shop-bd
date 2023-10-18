@@ -11,13 +11,16 @@ const ProductDetails = () => {
       price: product?.price,
       image: product?.image,
     };
-    fetch("http://localhost:5000/cartProducts", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(cartProduct),
-    })
+    fetch(
+      "https://technology-and-electronics-server-rlmxwnicm.vercel.app/cartProducts",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(cartProduct),
+      }
+    )
       .then((res) => res.json())
       .then((data) => {
         if (data.insertedId) {

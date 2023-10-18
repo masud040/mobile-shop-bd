@@ -22,13 +22,16 @@ const AddProduct = () => {
       descriptions,
     };
 
-    fetch("http://localhost:5000/products", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(product),
-    })
+    fetch(
+      "https://technology-and-electronics-server-rlmxwnicm.vercel.app/products",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(product),
+      }
+    )
       .then((res) => res.json())
       .then((data) => {
         if (data.insertedId) {
