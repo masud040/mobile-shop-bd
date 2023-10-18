@@ -20,7 +20,7 @@ const FlashSale = () => {
       <img
         src="https://i.ibb.co/3MbpNKR/33ec7df7-53b1-459c-bdaa-74dda383106e.gif"
         alt=""
-        className="rounded-md"
+        className="rounded-md w-full"
       />
       <div className="flex justify-between mt-3 p-3">
         <p className="text-white font-semibold text-xl">Products</p>
