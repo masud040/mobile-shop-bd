@@ -27,7 +27,7 @@ const Navbar = () => {
         />
       </div>
 
-      <div className="flex items-center justify-between gap-5">
+      <div className="flex items-center justify-around gap-5">
         <NavLink
           to="/"
           className={({ isActive, isPending }) =>

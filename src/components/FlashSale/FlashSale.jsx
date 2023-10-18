@@ -27,7 +27,7 @@ const FlashSale = () => {
       <div>
         <Swiper
           className="mySwiper "
-          speed={4000}
+          speed={3000}
           modules={[Autoplay, Pagination, Navigation]}
           autoplay={{ delay: 1500 }}
         >
