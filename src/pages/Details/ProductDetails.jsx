@@ -1,11 +1,37 @@
 import { useLoaderData } from "react-router-dom";
+import Swal from "sweetalert2";
 
 const ProductDetails = () => {
   const product = useLoaderData();
-  const { _id, productName, price, image, descriptions } = product || {};
-  const handleAddCart = () => {};
+  const { productName, price, image, descriptions } = product || {};
+  const handleAddCart = () => {
+    const cartProduct = {
+      name: product?.productName,
+      brand: product?.brandName,
+      price: product?.price,
+      image: product?.image,
+    };
+    fetch("http://localhost:5000/cartProducts", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(cartProduct),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.insertedId) {
+          Swal.fire({
+            title: "Great!",
+            text: "Successfully add on cart",
+            icon: "success",
+            confirmButtonText: "Okay",
+          });
+        }
+      });
+  };
   return (
-    <div className="w-[90%] md:w-[80%] flex justify-center gap-6 mx-auto my-8">
+    <div className="w-[90%] md:w-[80%] flex justify-center gap-8 items-center mx-auto my-8">
       <img src={image} alt="" />
       <div>
         <p>
