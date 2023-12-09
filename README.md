@@ -1,6 +1,10 @@
 # TechShopBD
 
-https://6530086fc2feb513e71790e0--glowing-pegasus-d1f675.netlify.app/
+https://657407d2648ed72ca8177249--warm-blini-6e9c08.netlify.app/
+
+### **Technology**
+
+#### **Javascript, React, Tailwind, Express, Firebase, Mongodb**
 
 - ### **Use MongoDB Databasse for store all data on this Project**
 
